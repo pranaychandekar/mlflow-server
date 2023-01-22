@@ -29,6 +29,6 @@ services:
       - PASSWORD=mysecretpassword
       - HOST=postgresql
       - PORT=5432
-      - DATABASE=mlflow
+      - DATABASE=postgres
     depends_on:
       - postgresql

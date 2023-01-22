@@ -1,4 +1,4 @@
-FROM ghcr.io/mlflow/mlflow:v2.1.1
+FROM ghcr.io/mlflow/mlflow
 
 MAINTAINER Pranay Chandekar "pranayc6@gmail.com"
 
