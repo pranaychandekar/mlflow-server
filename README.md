@@ -1,16 +1,17 @@
 ## MLFlow Tracking Server - Docker
 
-[MLflow](https://mlflow.org/) is an open source platform to manage the ML lifecycle, including experimentation, reproducibility, deployment, and a central model registry. MLflow currently offers four components:
+[MLflow](https://mlflow.org/) is an open source platform to manage the ML lifecycle, including experimentation, reproducibility, deployment, and a central model registry. 
 
-1.  MLFlow Tracking
-2.  MLFlow Projects
-3.  MLFlow Models
-4.  MLFlow Registry
-<br>
-<p align="center">          
-  <img src="/docs/images/mlflow-server-01.PNG" alt="MLFlow Components" />          
-</p>    
-<br>
+<p align="center">
+  <strong>MLFlow Tracking Server</strong>
+</p>
+
+![MLFlow Tracking Server](https://user-images.githubusercontent.com/22236038/214224523-719f1c0f-3253-4fb2-87f5-e66c6b5f0154.png)
+
+MLflow currently offers four components:
+
+![MLFlow Components](https://user-images.githubusercontent.com/22236038/214224427-96ec61b6-e635-4c4a-8f65-422222e6811d.png)
+
 To track ML experiments and version models, we need to host the MLFlow Tracking Server or MLFlow Server. To make this task simple, this repository offers the containerized solution for hosting the MLFlow Server in minutes. The only thing that you need to host it on your local system is the [Docker Engine](https://docs.docker.com/engine/install/).
 
 The documentation contains:
@@ -78,19 +79,13 @@ http://localhost:5000
 
 Your MLFlow Server is now ready to track your ML experiments and model versions.
 
-**MLFlow - Experiment Tracking**
-<br>
-<p align="center">          
-  <img src="/docs/images/mlflow-server-02.png" alt="MLFlow Experiment Tracking" />          
-</p>    
-<br>
+<p align="center">
+  <b>MLFlow - Model Registry</b>
+</p>
 
-**MLFlow - Model Registry**
-<br>
-<p align="center">          
-  <img src="/docs/images/mlflow-server-03.png" alt="MLFlow Model Registry" />          
-</p>    
-<br>
+![MLFlow Model Registry](https://user-images.githubusercontent.com/22236038/214224554-869773b7-bb8f-470d-a951-133e210421a5.png)
+
+
 ---
 
 **Author**: [Pranay Chandekar](https://linktr.ee/pranaychandekar)
