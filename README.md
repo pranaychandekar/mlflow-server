@@ -12,13 +12,7 @@ MLflow currently offers four components:
 
 ![MLFlow Components](https://user-images.githubusercontent.com/22236038/214224427-96ec61b6-e635-4c4a-8f65-422222e6811d.png)
 
-To track ML experiments and version models, we need to host the MLFlow Tracking Server or MLFlow Server. To make this task simple, this repository offers the containerized solution for hosting the MLFlow Server with PostgreSQL backend in minutes. 
-
-Prerequisites to host it on your local system:
-1. [Docker Engine](https://docs.docker.com/engine/install/)
-2. [Docker Compose](https://docs.docker.com/compose/)
-
-The PostgreSQL will be used to store all your experiments data. 
+To track ML experiments and version models, we need to host the MLFlow Tracking Server or MLFlow Server. To make this task simple, this repository offers the containerized solution for hosting the MLFlow Server in minutes. The only thing that you need to host it on your local system is the [Docker Engine](https://docs.docker.com/engine/install/).
 
 The documentation contains:
 
@@ -32,33 +26,50 @@ The documentation contains:
 
 | File Name | Description |
 | --- | --- |
-| `docker-compose.yml` | The file that brings up the entire setup |
 | `Dockerfile` | The dockerfile used to create the docker image |
 | `start_server.sh` | The script to start the MLFlow Server |
 
 ---
 
-## Start the MLFlow Server with PostgreSQL backend
+## Start the MLFlow Server
 
-**Step 01**: Run the docker compose command
+**Step 01**: Build the docker image of the MLFlow Server
 
-Run the following command in the directory with the `docker-compose.yml` file.
+Run the following command in the directory with the Dockerfile
 
 ```plaintext
-docker compose up
+ docker build --network=host -t mlflow-server .
 ```
 
-With this single command, your entire setup will come up. You can check the running containers with the following command.
+Check the container with the following command
+
+```plaintext
+docker images
+```
+
+You should see the `mlflow-server` image in the output.
+
+**Step 02**: Run the lambda function container
+
+Run the following command.
+
+```plaintext
+docker run -d --network=host --name=mlflow-server mlflow-server
+```
+
+This will create the lambda function container. Now your container is up and running to process the invocation.
+
+**Step 03**: Verify the running container
+
+Please execute the command below to verify whether the container is running.
 
 ```plaintext
 docker ps
 ```
 
-You should see the `mlflow-server` and `postgres` containers running. 
+You should see the `mlflow-server` container running.
 
-<br>
-
-**Step 02**: Launch the MLFlow Server UI
+**Step 04**: Launch the MLFlow Server UI
 
 Go to your browser and enter the below url
 
@@ -73,24 +84,6 @@ Your MLFlow Server is now ready to track your ML experiments and model versions.
 </p>
 
 ![MLFlow Model Registry](https://user-images.githubusercontent.com/22236038/214224554-869773b7-bb8f-470d-a951-133e210421a5.png)
-
-You can also try connecting to the PostgreSQL database using SQL clients such as [DBeaver](https://dbeaver.io/)
-
-![MLFlow PostgreSQL](https://user-images.githubusercontent.com/22236038/214240038-10318ceb-7bd4-4834-9bc5-8fe24e65edab.png)
-
-<br>
-
-**Step 03**: Cleanup
-
-Run this command to perform the cleanup post usage.
-
-```plaintext
-docker compose down
-```
-
-This command will delete both the containers. However, the images are still there. 
-
-
 
 
 ---
