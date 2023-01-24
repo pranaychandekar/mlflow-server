@@ -80,7 +80,7 @@ http://localhost:5000
 Your MLFlow Server is now ready to track your ML experiments and model versions.
 
 <p align="center">
-  <b>MLFlow - Model Registry</b>
+  <strong>MLFlow - Model Registry</strong>
 </p>
 
 ![MLFlow Model Registry](https://user-images.githubusercontent.com/22236038/214224554-869773b7-bb8f-470d-a951-133e210421a5.png)
@@ -88,4 +88,6 @@ Your MLFlow Server is now ready to track your ML experiments and model versions.
 
 ---
 
-**Author**: [Pranay Chandekar](https://linktr.ee/pranaychandekar)
+<p align="center">
+<strong>Author</strong>: <a href="https://linktr.ee/pranaychandekar">Pranay Chandekar</a>
+</p>
