@@ -79,7 +79,7 @@ http://localhost:5000
 Your MLFlow Server is now ready to track your ML experiments and model versions.
 
 **MLFlow - Experiment Tracking**
-
+<br>
 <p align="center">          
   <img src="/docs/images/mlflow-server-02.png" alt="MLFlow Experiment Tracking">          
 </p>    
@@ -90,7 +90,7 @@ Your MLFlow Server is now ready to track your ML experiments and model versions.
 <p align="center">          
   <img src="/docs/images/mlflow-server-03.png" alt="MLFlow Model Registry">          
 </p>    
-
+<br>
 ---
 
 **Author**: [Pranay Chandekar](https://linktr.ee/pranaychandekar)
