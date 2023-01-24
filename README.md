@@ -8,7 +8,7 @@
 4.  MLFlow Registry
 <br>
 <p align="center">          
-  <img src="/docs/images/mlflow-server-01.png" alt="MLFlow Components">          
+  <img src="/docs/images/mlflow-server-01.PNG" alt="MLFlow Components" />          
 </p>    
 <br>
 To track ML experiments and version models, we need to host the MLFlow Tracking Server or MLFlow Server. To make this task simple, this repository offers the containerized solution for hosting the MLFlow Server in minutes. The only thing that you need to host it on your local system is the [Docker Engine](https://docs.docker.com/engine/install/).
@@ -81,14 +81,14 @@ Your MLFlow Server is now ready to track your ML experiments and model versions.
 **MLFlow - Experiment Tracking**
 <br>
 <p align="center">          
-  <img src="/docs/images/mlflow-server-02.png" alt="MLFlow Experiment Tracking">          
+  <img src="/docs/images/mlflow-server-02.png" alt="MLFlow Experiment Tracking" />          
 </p>    
 <br>
 
 **MLFlow - Model Registry**
 <br>
 <p align="center">          
-  <img src="/docs/images/mlflow-server-03.png" alt="MLFlow Model Registry">          
+  <img src="/docs/images/mlflow-server-03.png" alt="MLFlow Model Registry" />          
 </p>    
 <br>
 ---
